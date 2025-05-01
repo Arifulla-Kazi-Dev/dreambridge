@@ -1,0 +1,25 @@
+<nav class="flex items-center justify-between p-4 bg-white shadow">
+    <a routerLink="/" class="text-xl font-bold text-blue-700">DreamBridge</a>
+    <div class="flex gap-5">
+        <button 
+        (click)="viewHome()"
+        class="text-gray-700 hover:text-blue-600"
+      >
+        Home
+      </button>      <button 
+          (click)="viewVision()"
+          class="text-gray-700 hover:text-blue-600"
+        >
+          Vision
+        </button>
+      <button 
+          (click)="viewDreamForm()"
+          class="text-gray-700 hover:text-blue-600"
+        >
+          Dream Form
+        </button>
+      
+      <a routerLink="/contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+    </div>
+  </nav>
+  

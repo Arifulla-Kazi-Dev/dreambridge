@@ -1,0 +1,72 @@
+<section class="min-h-screen bg-gradient-to-br from-white to-blue-50 flex items-center justify-center py-10 px-6">
+    <div class="w-full max-w-2xl bg-white p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold text-blue-800 mb-6 text-center">Start Your Dream</h2>
+  
+      <form #dreamForm="ngForm" (ngSubmit)="onSubmit(dreamForm)" novalidate>
+        <!-- Full Name -->
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 font-semibold mb-1">Full Name</label>
+          <input type="text" id="name" name="name" [(ngModel)]="formData.name" required class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+  
+        <!-- Age -->
+        <div class="mb-4">
+          <label for="age" class="block text-gray-700 font-semibold mb-1">Age</label>
+          <input type="number" id="age" name="age" [(ngModel)]="formData.age" required min="10" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+  
+        <!-- Email -->
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-semibold mb-1">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="formData.email" required class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+  
+        <!-- Dream Description -->
+        <div class="mb-4">
+          <label for="dream" class="block text-gray-700 font-semibold mb-1">Describe Your Dream</label>
+          <textarea id="dream" name="dream" [(ngModel)]="formData.dream" rows="4" required class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+        </div>
+  
+        <!-- Timeline -->
+        <div class="mb-4">
+          <label for="timeline" class="block text-gray-700 font-semibold mb-1">Timeline to Achieve</label>
+          <input type="text" id="timeline" name="timeline" [(ngModel)]="formData.timeline" required class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g., 6 months, 1 year">
+        </div>
+  
+        <!-- Financial Status -->
+        <div class="mb-4">
+          <label for="status" class="block text-gray-700 font-semibold mb-1">Current Financial Status</label>
+          <select id="status" name="status" [(ngModel)]="formData.status" required class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+            <option value="" disabled selected>Select status</option>
+            <option value="stable">Stable</option>
+            <option value="struggling">Struggling</option>
+            <option value="critical">Critical</option>
+          </select>
+        </div>
+  
+        <!-- Support Needed -->
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2">What kind of support do you need?</label>
+          <div class="flex flex-wrap gap-4">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="support" [(ngModel)]="formData.support.financial"> Financial Guidance
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="support" [(ngModel)]="formData.support.mental"> Emotional Support
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="support" [(ngModel)]="formData.support.mentor"> Mentorship
+            </label>
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" [disabled]="!dreamForm.valid" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition duration-300">
+            Submit Your Dream
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
