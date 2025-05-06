@@ -33,4 +33,9 @@ viewVision() {
   this.router.navigate(['/vision']);
 }
 
+viewContact() {
+  // Navigate to the Insights component
+  this.router.navigate(['/contact']);
+}
+
 }

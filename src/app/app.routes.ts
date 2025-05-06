@@ -5,6 +5,7 @@ import { DreamFormComponent } from './pages/dream-form/dream-form.component';
 import { HomeComponent } from './pages/home/home.component';
 import { VisionComponent } from './pages/vision/vision.component';
 import { NgModule } from '@angular/core';
+import { DreamShowcaseComponent } from './pages/dream-showcase/dream-showcase.component';
 import { DreamPlanComponent } from './dream-plan/dream-plan.component';
 
 export const routes: Routes = [
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: 'dream-form', component: DreamFormComponent },
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
+    { path: 'showcase', component: DreamShowcaseComponent },
     { path: 'dream-plan', component: DreamPlanComponent },
 
   ];
