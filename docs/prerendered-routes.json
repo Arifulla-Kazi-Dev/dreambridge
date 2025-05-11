@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/dreambridge": {},
+    "/dreambridge/about": {},
+    "/dreambridge/contact": {},
+    "/dreambridge/dream-form": {},
+    "/dreambridge/dream-plan": {},
+    "/dreambridge/showcase": {},
+    "/dreambridge/vision": {}
+  }
+}
