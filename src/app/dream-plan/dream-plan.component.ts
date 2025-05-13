@@ -113,5 +113,41 @@ Reply format strictly:
   handleError() {
     throw new Error('Method not implemented.');
   }
+  downloadDataAsFile(data: string, filename: string) {
+  const blob = new Blob([data], { type: 'text/plain' });
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  window.URL.revokeObjectURL(url);
+}
+
+  downloadPlan(): void {
+  const name = this.dreamData?.name || 'user';
+  const content = `
+Dream Roadmap for ${name}
+
+🌟 Dream: ${this.dreamData?.dream}
+🕒 Timeline: ${this.dreamData?.timeline} years
+💰 Monthly Savings Needed: ₹${this.monthlySavings}
+🚀 Action Step: ${this.actionStep}
+
+🧠 Emotional Advice:
+${this.emotionAdvice}
+
+📚 Academy Tip:
+${this.academyTip}
+
+🤝 Community Message:
+${this.communityMessage}
+
+🤖 Motivational Suggestion:
+${this.suggestion}
+`.trim();
+
+  this.downloadDataAsFile(content, `${name}_Dream_Plan.txt`);
+}
+
 
 }

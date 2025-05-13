@@ -11,6 +11,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <app-root ng-version="19.2.5" ngh="1" ng-server-context="ssg"><app-navbar _nghost-ng-c3144002395 ngh="0"><nav _ngcontent-ng-c3144002395 class="flex items-center justify-between p-4 bg-white shadow"><button _ngcontent-ng-c3144002395 class="text-xl font-bold text-blue-700" jsaction="click:;">
 DreamBridge
 </button><div _ngcontent-ng-c3144002395 class="flex gap-5"><button _ngcontent-ng-c3144002395 class="text-gray-700 hover:text-blue-600" jsaction="click:;"> Home </button><button _ngcontent-ng-c3144002395 class="text-gray-700 hover:text-blue-600" jsaction="click:;"> Vision </button><button _ngcontent-ng-c3144002395 class="text-gray-700 hover:text-blue-600" jsaction="click:;"> Dream Form </button><button _ngcontent-ng-c3144002395 class="text-gray-700 hover:text-blue-600" jsaction="click:;"> Contact </button></div></nav></app-navbar><router-outlet></router-outlet><app-about ngh="0"><p>about works!</p></app-about><!----></app-root>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-FJIUKQ3B.js" type="module"></script>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-TAIX5BOJ.js" type="module"></script>
 
 <script id="ng-state" type="application/json">{"__nghData__":[{},{"c":{"1":[{"i":"c1249447430","r":1}]}}]}</script></body></html>`;
