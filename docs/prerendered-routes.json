@@ -2,6 +2,8 @@
   "routes": {
     "/dreambridge": {},
     "/dreambridge/about": {},
+    "/dreambridge/academy": {},
+    "/dreambridge/community": {},
     "/dreambridge/contact": {},
     "/dreambridge/dream-form": {},
     "/dreambridge/dream-plan": {},
