@@ -3,6 +3,8 @@ import { Component, inject } from '@angular/core';
 import { DreamDataService } from '../dream-data.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dream-plan',
@@ -23,7 +25,7 @@ export class DreamPlanComponent {
   private dreamService = inject(DreamDataService);
   private http = inject(HttpClient);
 
-  constructor() {
+  constructor(private router: Router) {
     this.dreamData = this.dreamService.getDreamData();
 
     if (!this.dreamData) {
@@ -150,4 +152,13 @@ ${this.suggestion}
 }
 
 
+
+viewAcademy() {
+  // Navigate to the Insights component
+  this.router.navigate(['/academy']);
+}
+viewCommunity() {
+  // Navigate to the Insights component
+  this.router.navigate(['/community']);
+}
 }

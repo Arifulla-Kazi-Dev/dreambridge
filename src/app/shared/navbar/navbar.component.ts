@@ -12,8 +12,7 @@ import { Router } from '@angular/router'; // Import Router
 })
 export class NavbarComponent {
  
-isMenuOpen: any;
-
+ isMenuOpen = false;
 closeMenu() {
   this.isMenuOpen = false; // Close menu when a link is clicked
 }

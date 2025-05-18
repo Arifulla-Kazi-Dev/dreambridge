@@ -1,0 +1,19 @@
+<div class="container academic-tip bg-gradient-to-br from-blue-100 via-sky-100 to-purple-100 py-10 px-6 rounded-lg shadow-lg max-w-3xl mx-auto mt-8 animate-fade-in">
+  <h2 class="text-3xl font-bold text-blue-800 mb-4 flex items-center gap-2">
+    📚 <span>Personalized Academic Tip</span>
+  </h2>
+
+  <p class="text-gray-700 text-lg leading-relaxed bg-white p-4 rounded-md shadow-inner border-l-4 border-blue-500 mb-6">
+    {{ tip }}
+  </p>
+
+  <div class="video-wrapper rounded-lg overflow-hidden shadow-md">
+    <iframe
+      class="w-full aspect-video"
+      [src]="'https://www.youtube.com/embed/H14bBuluwB8'"
+      frameborder="0"
+      allowfullscreen
+      title="Study Motivation">
+    </iframe>
+  </div>
+</div>

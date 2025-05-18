@@ -1,38 +1,37 @@
-<nav class="flex items-center justify-between p-4 bg-white shadow">
-  <button 
-  (click)="viewHome()"
-  class="text-xl font-bold text-blue-700"
->
-DreamBridge
-</button>
-    <div class="flex gap-5">
-        <button 
-        (click)="viewHome()"
-        class="text-gray-700 hover:text-blue-600"
-      >
-        Home
-      </button>      
-      <button 
-          (click)="viewVision()"
-          class="text-gray-700 hover:text-blue-600"
-        >
-          Vision
-        </button>
-      <button 
-          (click)="viewDreamForm()"
-          class="text-gray-700 hover:text-blue-600"
-        >
-          Dream Form
-        </button>
+<nav class="flex items-center justify-between p-4 bg-white shadow relative">
+  <!-- Logo / Home -->
+  <button (click)="viewHome()" class="text-xl font-bold text-blue-700">
+    DreamBridge
+  </button>
 
-        <button 
-          (click)="viewContact()"
-          class="text-gray-700 hover:text-blue-600"
-        >
-          Contact
-        </button>
-      
-      
-    </div>
-  </nav>
-  
+  <!-- Hamburger Icon (visible on small screens) -->
+  <button
+    class="md:hidden   focus:outline-none"
+    (click)="isMenuOpen = !isMenuOpen"
+  >
+    <svg class="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex gap-5">
+    <button (click)="viewHome()" class="text-gray-700 hover:text-blue-600">Home</button>
+    <button (click)="viewVision()" class="text-gray-700 hover:text-blue-600">Vision</button>
+    <button (click)="viewDreamForm()" class="text-gray-700 hover:text-blue-600">Dream Form</button>
+    <button (click)="viewContact()" class="text-gray-700 hover:text-blue-600">Contact</button>
+  </div>
+
+  <!-- Mobile Menu (Dropdown) -->
+  <div
+    class="absolute top-full left-0 w-full flex-col bg-white shadow-md p-4 md:hidden"
+    *ngIf="isMenuOpen"
+  >
+    <button (click)="viewHome(); closeMenu()" class="block w-full text-left text-gray-700 hover:text-blue-600 mb-2">Home</button>
+    <button (click)="viewVision(); closeMenu()" class="block w-full text-left text-gray-700 hover:text-blue-600 mb-2">Vision</button>
+    <button (click)="viewDreamForm(); closeMenu()" class="block w-full text-left text-gray-700 hover:text-blue-600 mb-2">Dream Form</button>
+    <button (click)="viewContact(); closeMenu()" class="block w-full text-left text-gray-700 hover:text-blue-600">Contact</button>
+  </div>
+</nav>

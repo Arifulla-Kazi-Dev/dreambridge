@@ -7,6 +7,8 @@ import { VisionComponent } from './pages/vision/vision.component';
 import { NgModule } from '@angular/core';
 import { DreamShowcaseComponent } from './pages/dream-showcase/dream-showcase.component';
 import { DreamPlanComponent } from './dream-plan/dream-plan.component';
+import { AcademicTipComponent } from './pages/academy-tip/academy-tip.component';
+import { CommunityComponent } from './pages/community-support/community-support.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,6 +17,8 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'showcase', component: DreamShowcaseComponent },
+    { path: 'academy', component: AcademicTipComponent },
+    { path: 'community', component: CommunityComponent },
     { path: 'dream-plan', component: DreamPlanComponent },
 
   ];
