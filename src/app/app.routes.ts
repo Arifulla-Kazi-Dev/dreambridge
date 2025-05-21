@@ -9,9 +9,11 @@ import { DreamShowcaseComponent } from './pages/dream-showcase/dream-showcase.co
 import { DreamPlanComponent } from './dream-plan/dream-plan.component';
 import { AcademicTipComponent } from './pages/academy-tip/academy-tip.component';
 import { CommunityComponent } from './pages/community-support/community-support.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: LandingComponent },
+    { path: 'home', component: HomeComponent },    
     { path: 'vision', component: VisionComponent },
     { path: 'dream-form', component: DreamFormComponent },
     { path: 'about', component: AboutComponent },

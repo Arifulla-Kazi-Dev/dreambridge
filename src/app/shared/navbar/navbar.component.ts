@@ -18,10 +18,13 @@ closeMenu() {
 }
 constructor(private router: Router) {} // Inject Router
 
-
-viewHome() {
+viewLand() {
   // Navigate to the Insights component
   this.router.navigate(['/']);
+}
+viewHome() {
+  // Navigate to the Insights component
+  this.router.navigate(['/home']);
 }
 viewDreamForm() {
   // Navigate to the Insights component
